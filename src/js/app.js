@@ -42,15 +42,23 @@ function render(variables = {}) {
           <h3>${variables.city !== null ? variables.city : "City"}
               ${variables.country !== null ? variables.country : "Country"}
           </h3>
-                    <ul class="position-right">
+          
+          <ul class="${
+            variables.socialMediaPosition != "position-rigth"
+              ? variables.socialMediaPosition
+              : "position-rigth"
+          }">
+
             <li><a href="https://twitter.com/
             ${
               variables.twitter !== null ? variables.twitter : "Twitter"
             }"><i class="fab fa-twitter"></i></a></li>
+
             <li><a href="https://github.com/
             ${
               variables.github !== null ? variables.github : "Github"
             }"><i class="fab fa-github"></i></a></li>
+
             <li><a href="https://linkedin.com/
             ${
               variables.linkedin !== null ? variables.linkedin : "Linkedin"
